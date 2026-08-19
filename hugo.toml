@@ -1,4 +1,4 @@
-baseURL = 'https://gaelle.boscals.eu'
+baseURL = 'https://gaelle.boscals.eu/'
 theme = "mana"
 defaultContentLanguage = "en"
 
