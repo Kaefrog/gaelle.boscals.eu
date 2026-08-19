@@ -32,6 +32,8 @@
 
 {{ if .Params.tags }}
   <meta name="keywords" content="{{ delimit .Params.tags ", " }}">
+{{ else if site.Params.keywords }}
+  <meta name="keywords" content="{{ delimit site.Params.keywords ", " }}">
 {{ end }}
 
 {{ if .Params.author }}
@@ -83,16 +85,6 @@
 
 {{ range .AlternativeOutputFormats }}
   <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}">
-{{ end }}
-
-{{ with .Site.Home }}
-  {{ with .OutputFormats.Get "RSS" }}
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      href="{{ .RelPermalink }}"
-      title="{{ site.Title }}">
-  {{ end }}
 {{ end }}
 
 {{ if site.Params.umami.websiteId }}

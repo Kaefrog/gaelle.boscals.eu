@@ -1,6 +1,8 @@
 baseURL = 'https://gaelle.boscals.eu/'
+title = 'Gaëlle Boscals'
 theme = "mana"
 defaultContentLanguage = "en"
+locale = "en-GB"
 
 # Pagination Configuration
 # Configure how many posts to show per page
@@ -33,7 +35,7 @@ defaultContentLanguage = "en"
 
 # Output formats for search index
 [outputs]
-  home = ["HTML", "JSON"]
+  home = ["HTML", "RSS", "JSON"]
 
 # Sitemap configuration for SEO
 [sitemap]
@@ -53,8 +55,9 @@ defaultContentLanguage = "en"
   relatedPostsCount = 3
 
   
-  description = "gaelle.boscals.eu"
-  author = "Gaelle"
+  description = "Personal website of Gaëlle Boscals."
+  author = "Gaëlle Boscals"
+  keywords = ["Gaëlle Boscals", "Gaelle Boscals", "personal website"]
   heroTitleLine1 = "Gaelle Boscals"
   heroTitleLine2 = "Croak"
   
@@ -65,11 +68,12 @@ defaultContentLanguage = "en"
 
   # Avatar (general fallback; override per page with [params.avatar.home] or [params.avatar.about])
   [params.avatar]
+    url = "/images/chicken.jpg"
     assetPath = "images/chicken.jpg"  # Relative to assets folder; used if url not set
     enableResize = true  # Set false to preserve original size
 
     [params.avatar.home]
-      # url = "https://example.com/home-avatar.jpg"
+      url = "/images/chicken.jpg"
       assetPath = "images/chicken.jpg"
 
     [params.avatar.about]

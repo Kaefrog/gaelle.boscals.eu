@@ -43,6 +43,16 @@
     </a>
   {{ end }}
 
+  {{ with site.Home.OutputFormats.Get "RSS" }}
+    <a href="{{ .RelPermalink }}" class="social-link" aria-label="RSS feed" title="RSS feed">
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 11a9 9 0 0 1 9 9"/>
+        <path d="M4 4a16 16 0 0 1 16 16"/>
+        <circle cx="5" cy="19" r="1" fill="currentColor" stroke="none"/>
+      </svg>
+    </a>
+  {{ end }}
+
   {{ if site.Params.social.twitter }}
     <a
       href="https://x.com/{{ strings.TrimPrefix "@" site.Params.social.twitter }}"
